@@ -1,14 +1,29 @@
+*{
+    padding : 0px;
+    margin : 0px;
+}
 .container-fluid{
     display : flex;
+}
+body{
+    overflow-x: hidden;
 }
 #navbarNav{
     display: flex;
     flex : 1;
 }
-
+.nav-link>i{
+    padding-left: 10px;
+}
+#nav-main{
+    position: fixed;
+    top : 0px;
+    width : 100vw;
+}
 #nav-img{
     display: flex;
     flex : 1;
+   margin-left: 40px;
 }
 #nav-login{
     color : #2f80ed;
@@ -25,7 +40,19 @@
     font-size: small;
     font-weight: 600;
     line-height : 30px;
+
 }
+
+@media screen and (max-width : 800px){
+    .navbar-nav>li{
+        display: none;
+    }
+    #nav-main{
+        width : 100%;
+    }
+   
+}
+
 #page-1{
     display: flex;
     justify-content: space-evenly;
@@ -39,6 +66,115 @@
     justify-content: center;
     align-items: left;
     text-align: left;
+}
+@media screen and (max-width : 800px){
+    #page-1{
+        flex-direction: column;
+        margin-right: -900px;
+    }
+    .page1-con1{
+        margin-left: 30px;
+    }
+    .page1-con2{
+        margin-right: -900px;
+    }
+    #pg1-img1{
+        display: none;
+    }
+    #p1-botom{
+        margin-bottom: 100px;
+    }
+    .page2-div{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width : 100%;
+    }
+    /* .table{
+        margin-left: 500px;
+    }
+    .page2-div{
+        
+        width : 100vw;
+    } */
+    .page2{
+        margin-right: -1200px;
+        padding: 10px;
+    }
+    .page2-div1{
+        margin-right: -500px;
+    }
+    .page2-div2{
+        margin-left : -50px;
+    }
+    .page3{
+        margin-right: -1200px;
+    }
+    .page4{
+        margin-right: -1200px;
+    }
+    
+}
+@media screen and (width : 768px){
+    .page2{
+        margin-right: -2000px;
+        padding: 50px;
+    }
+    .page3{
+        margin-right: -2000px;
+        padding: 100px ;
+    }
+    .page4-div{
+        flex-direction: row !important;
+        align-items: center;
+    }
+    .page4{
+        margin-right: -1500px;
+    }
+    
+
+}
+@media screen and (max-width : 500px){
+    .page1-con2{
+        margin-left: 150px;
+        width : 300px
+    }
+    .page4-div{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media screen and (min-width : 1000px){
+    #nav-main{
+        width : 100%;
+    }
+    /* #page-1{
+        margin-left: 700px;
+    } */
+    /* .page2>h5 ,.page2>p{
+        margin-right: -200px;
+       
+    }
+    .page2{
+        margin-right: -500px;
+    } */
+    /* .page2{
+        margin-left : 300px;
+        padding: 50px;
+    } */
+    /* .page3{
+        margin-left : 300px;
+        margin-right: -700px;
+    }
+    .page4{
+        margin-left : 300px;
+        margin-right: -900px;
+    }
+    .page4-div{
+        flex-direction: row !important;
+        align-items: center;
+    } */
+   
 }
 
 .page1-con2{
@@ -68,12 +204,21 @@ text-align: left;
 .page1-con1>h2>span{
     color : blue;
 }
+.page1-con1>h2>span>span{
+    color : #292d30;
+    padding-left: 10px;
+}
 .page1-cont1-div1{
     background-color: white;
     padding: 10px;
     box-shadow: 10px 10px 100px whitesmoke;
     margin-inline: 10px;
 }
+#pg1-img1{
+    height : 100px;
+    width : 150px;
+    margin-top: 150px;
+} 
 .page1-con1>#p1-botom{
     margin-top: 100px;
     border-radius: 20px;
@@ -84,6 +229,16 @@ text-align: left;
 .page-1-div1-div>img{
     width : 40px;
     height: 40px;
+}
+.page1-con1{
+    margin-left : 30px;
+}
+.page1-con1>h2 , .page1-con1>p{
+    margin-left: 20px;
+}
+.page-1-div1-div{
+    justify-content: space-between;
+    margin-inline: 10px;
 }
 .page1-con2>h3{
    font-family: ABeeZee;
@@ -106,7 +261,7 @@ text-align: center;
 
 }
 .page1-con2>input{
-    background-color: #fdecec;
+    background-color: #f1f1f1;
     border-radius: 10px;
     padding: 5px 20px;
     border: none;
@@ -129,6 +284,19 @@ text-align: center;
     padding-top: 100px;
     padding-bottom: 100px;
 }
+.page2-div1-img1 , .page2-div2-img1{
+    display: flex;
+    align-items: center;
+}
+.page2-div1-img1>h6{
+    font-size: xx-large;
+    font-style: italic;
+}
+.page2-div2-img1>h6{
+    font-size: xx-large;
+    font-style: italic;
+}
+
 .page2>h5{
     text-transform: capitalize;
     font-family: ABeeZee;
@@ -160,6 +328,7 @@ color : #6a56ee;
     margin-right: 50px;
     border-radius: 10px;
 }
+
 .table>tr>td{
    font-family: ABeeZee;
 font-size: 16px;
@@ -184,12 +353,22 @@ text-align: left;
     border: 2px solid  #3181ed;
     border-radius: 10px;
     padding: 5px 30px;
+    border: none;
+}
+.p2-btn1:hover{
+    background-color: #2f80ed;
+    color : white;
 }
 .p2-btn2{
     background-color: #3181ed;
     color: white;
      border-radius: 10px;
     padding: 5px 30px;
+    border : none;
+}
+.p2-btn2:hover{
+    background-color: white;
+    color: #3181ed;
 }
 .page2-div>div>h6{
      font-family: ABeeZee;
@@ -233,6 +412,12 @@ text-align: left;
 .page2>h5 , .page2>p{
     text-align: center;
 }
+/* @media screen and (max-width : 800){
+    .table{
+        margin-left: 500px;
+        background-color: black;
+    }
+} */
 .page3{
     padding-top: 100px;
     padding-bottom: 100px;
@@ -278,6 +463,44 @@ color : #2f80ed;
     margin-inline: 20px;
     padding-top: 20px;
 }
+@keyframes moveLeft {
+    0% {
+        transform: translateX(100vw); /* Start from the right edge of the viewport */
+    }
+    100% {
+        transform: translateX(-100%); /* Move the element to the left edge of the viewport */
+    }
+}
+
+#page3-div1{
+    animation: moveLeft 8s linear infinite;
+}
+@keyframes moveX {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100vw); /* Move the element to the right edge of the viewport */
+    }
+}
+#page3-div2{
+    animation: moveX 8s linear infinite;
+}
+@keyframes moveLeft {
+    0% {
+        transform: translateX(100vw); /* Start from the right edge of the viewport */
+    }
+    100% {
+        transform: translateX(-100%); /* Move the element to the left edge of the viewport */
+    }
+}
+
+#page3-div3{
+    animation: moveLeft 8s linear infinite;
+}
+#page3-div>div>img{
+    margin-right: 50px;
+}
 .page3{
     display: flex;
     flex-direction: column;
@@ -290,6 +513,10 @@ color : #2f80ed;
     padding: 10px 40px;
     border-radius: 10px;
 }
+.page3-button:hover{
+    background-color: #dcdcdc;
+    color : #2f80ed;
+}
 .page4-div-3{
     display: flex;
     flex-direction: column;
@@ -298,6 +525,18 @@ color : #2f80ed;
     display: flex;
     justify-content: space-between;
     padding: 10px;
+}
+.page4>#p4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#p4>h5{
+    font-size: xx-large;
+    font-style: italic;
+}
+#p4>p{
+    color : #666666;
 }
 .page4-div-1{
     display: flex;
@@ -308,7 +547,9 @@ color : #2f80ed;
     border-radius: 10px;
     height: fit-content;
     padding: 20px;
+    box-shadow: 10px 10px 100px #d3d3d3;
 }
+
 .page4-div{
     display: flex;
     flex-wrap: wrap;
@@ -322,9 +563,8 @@ color : #2f80ed;
     width : 30px;
     height : 30px;
 }
-#page4-ext1{
-    margin-top: -85px;
+
+.page4{
+    margin-bottom: 50px;
 }
-#page4-ext2{
-    margin-top: -40px;
-}
+
